@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <meta name='viewport' content='initial-scale=1.0, user-scale=no'>
+        <script type='text/javascript'
+        scr='http://maps.google.com/maps/api/js2sensor=false'>
+        </script>
+
+        <script>
+        function initMap ()
+        {
+            var latlng = new google.maps.LatLng( 62.242425, -92.601678 );
+            var options =
+            {
+                zoom :4,
+                center:latlng,
+                mapTypeId: google.maps,MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById('map_canvas'),options);
+        }
+
+        </script>
+        <title>Google Map</title>
     </head>
-    <body>
-        hello
+
+
+    <body onload='initMap()'>
+<div id='map_canvas' style='width:700px; height:500px'></div>
+
+<footer>@Copy Right Victor Vieira</footer>
     </body>
 </html>
